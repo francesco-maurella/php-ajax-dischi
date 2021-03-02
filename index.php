@@ -15,7 +15,7 @@ require_once __DIR__ . '/database/database.php';
     <!-- TOP-BAR HEADER -->
     <header>
       <div class="container al-cntr flx">
-        <img src="img/logo.png" alt="logo">
+        <img src="database/img/00-logo.png" alt="logo">
         <nav class="selectors">
           <select>
             <option disabled value="">Filter by Gender</option>
@@ -29,12 +29,20 @@ require_once __DIR__ . '/database/database.php';
     <!-- MAIN DISC-LIST CONTENT -->
     <main class="cds-container flx container">
       <!-- Disc element -->
-      <div class="cd al-cntr flx">
-        <img src="disc.poster" alt="poster">
-        <h3>Disc title</h3>
-        <span class="author">Disc author</span>
-        <span class="year">Disc year</span>
-      </div>
+      <?php
+      foreach ($discs as $disc) {
+        ?>
+
+        <div class="cd al-cntr flx">
+          <img src="<?php echo $disc['poster'] ?>" alt="poster">
+          <h3><?php echo $disc['title'] ?></h3>
+          <span class="author"><?php echo $disc['author'] ?></span>
+          <span class="year"><?php echo $disc['year'] ?></span>
+        </div>
+
+        <?php
+      }
+       ?>
       <!-- / Disc element -->
     </main>
     <!-- / MAIN DISC-LIST CONTENT -->
