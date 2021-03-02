@@ -1,5 +1,9 @@
 <?php
 
-// 2nd milestone:
-// farà il json encode del mio database. => require_once
-// ricordatevi dell'header (vedi le slide)
+require_once '../database/database.php';
+
+header('Content-Type: application/json');
+
+$discsData = json_encode($discs);
+
+echo $discsData;

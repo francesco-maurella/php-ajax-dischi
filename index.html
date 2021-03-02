@@ -1,16 +1,48 @@
 <!DOCTYPE html>
-<html lang="it" dir="ltr">
-<head>
+<html lang="en" dir="ltr">
+  <head>
     <meta charset="utf-8">
-    <title></title>
-</head>
-<body>
+    <title>JAVASCRIPT - PHP / AJAX [Dischi - Milestone#2]</title>
+    <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.20.0/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
 
-    <!-- 2nd milestone
-    per la seconda milestone, index.html dovrà eseguire una chiamata ajax (meglio se con vuejs) verso app/server.php
+    <div id="app">
 
-    -->
+      <!-- TOP-BAR HEADER -->
+      <header>
+        <div class="container al-cntr flx">
+          <img src="database/img/00-logo.png" alt="logo">
+          <nav class="selectors">
+            <select>
+              <option disabled value="">Filter by Gender</option>
+              <option>Gender</option>
+            </select>
+          </nav>
+        </div>
+      </header>
+      <!-- / TOP-BAR HEADER -->
+
+      <!-- MAIN DISC-LIST CONTENT -->
+      <main class="cds-container flx container">
+        <!-- Disc element -->
+        <div v-for="disc in discsList" class="cd al-cntr flx">
+          <img :src="disc.poster" alt="poster">
+          <h3>{{disc.title}}</h3>
+          <span class="author">{{disc.author}}</span>
+          <span class="year">{{disc.year}}</span>
+        </div>
+        <!-- / Disc element -->
+      </main>
+      <!-- / MAIN DISC-LIST CONTENT -->
+
+    </div>
+
+    <script src="js/script.js" charset="utf-8"></script>
 
 
-</body>
+  </body>
 </html>

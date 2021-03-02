@@ -1,1 +1,0 @@
-Qui dentro metteremo i nostri file php che contengono dei dati.

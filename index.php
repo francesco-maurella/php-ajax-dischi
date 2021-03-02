@@ -6,9 +6,9 @@ require_once __DIR__ . '/database/database.php';
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>JAVASCRIPT - PHP / AJAX [Dischi]</title>
+    <title>JAVASCRIPT - PHP / AJAX [Dischi - Milestone#1]</title>
     <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href=" css/style.css">
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
 
