@@ -43,7 +43,7 @@
 
 .main {
   background-color: #1E2D3B;
-  min-height: calc(100vh - $topbar-h-size);
+  min-height: calc(100vh - 70px);
 }
 .main-cds-list {
   display: flex;

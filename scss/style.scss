@@ -44,7 +44,7 @@
 
 .main {
   background-color: $main-bg-col;
-  min-height: calc(100vh - $topbar-h-size);
+  min-height: calc(100vh - #{$topbar-h-size});
 
     &-cds-list {
       @include flx-jc-center;
