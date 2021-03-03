@@ -5,7 +5,7 @@ new Vue ({
 
   // DATA
   data: {
-    apiUrl: 'http://localhost/php-ajax-dischi/app/server.php',
+    apiUrl: 'app/server.php',
     genre: '',
     genres: [],
     discsList : []

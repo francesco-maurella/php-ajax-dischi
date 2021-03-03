@@ -6,9 +6,9 @@ function filterByType($array, $arg, $type) {
   if (empty($arg)) {
     $list = $array;
   } else {
-    foreach ($array as $elm) {
-      if ($arg === $elm[$type]) $list[] = $elm;
-    }
+    $list = array_filter($array, function ($elm) use ($arg, $type) {
+      return ($elm[$type] === $arg);
+    });
   }
   return $list;
 }
