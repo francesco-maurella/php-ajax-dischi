@@ -3,20 +3,19 @@
   <head>
     <meta charset="utf-8">
     <title>JAVASCRIPT - PHP / AJAX [Dischi - Milestone#2]</title>
-    <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.20.0/axios.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vue"></script>
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
 
-    <div id="app">
+    <div id="app" class="wrapper">
 
       <!-- TOP-BAR HEADER -->
-      <header>
-        <div class="container al-cntr flx">
+      <header class="top-bar">
+        <div class="container">
           <img src="img/00-logo.png" alt="logo">
-          <nav class="selectors">
+          <nav class="top-bar-selectors">
             <select @click="filterList" v-model="genre">
               <option disabled value="">Filter by Genres</option>
               <option value="">all</option>
@@ -28,15 +27,23 @@
       <!-- / TOP-BAR HEADER -->
 
       <!-- MAIN DISC-LIST CONTENT -->
-      <main class="cds-container flx container">
-        <!-- Disc element -->
-        <div v-for="disc in discsList" class="cd al-cntr flx">
-          <img :src="disc.poster" alt="poster">
-          <h3>{{disc.title}}</h3>
-          <span class="author">{{disc.author}}</span>
-          <span class="year">{{disc.year}}</span>
+      <main class="main">
+        <div class="container">
+          <ul class="main-cds-list">
+            <!-- Disc element -->
+            <li v-for="disc in discsList" class="main-cds-list-elm">
+              <div class="title">
+                <img :src="disc.poster" alt="poster">
+                <div>{{disc.title}}</div>
+              </div>
+              <div class="data">
+                <div>{{disc.artist}}</div>
+                <div>{{disc.year}}</div>
+              </div>
+            </li>
+            <!-- / Disc element -->
+          </ul>
         </div>
-        <!-- / Disc element -->
       </main>
       <!-- / MAIN DISC-LIST CONTENT -->
 
