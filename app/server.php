@@ -3,10 +3,8 @@
 // Funzione filtro per tipo
 function filterByType($array, $arg, $type) {
   $list = [];
-  if (!$arg) {
-    foreach ($array as $elm) {
-      $list[] = $elm;
-    }
+  if (empty($arg)) {
+    $list = $array;
   } else {
     foreach ($array as $elm) {
       if ($arg === $elm[$type]) $list[] = $elm;
@@ -15,7 +13,7 @@ function filterByType($array, $arg, $type) {
   return $list;
 }
 
-// Importazione dabase
+// Importazione database
 require_once '../database/database.php';
 
 // Header Json encode

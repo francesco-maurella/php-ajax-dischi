@@ -16,12 +16,6 @@ require_once __DIR__ . '/database/database.php';
     <header>
       <div class="container al-cntr flx">
         <img src="database/img/00-logo.png" alt="logo">
-        <nav class="selectors">
-          <select>
-            <option disabled value="">Filter by Gender</option>
-            <option>Gender</option>
-          </select>
-        </nav>
       </div>
     </header>
     <!-- / TOP-BAR HEADER -->
