@@ -15,11 +15,12 @@
       <!-- TOP-BAR HEADER -->
       <header>
         <div class="container al-cntr flx">
-          <img src="database/img/00-logo.png" alt="logo">
+          <img src="img/00-logo.png" alt="logo">
           <nav class="selectors">
-            <select>
-              <option disabled value="">Filter by Gender</option>
-              <option>Gender</option>
+            <select @click="filterList" v-model="genre">
+              <option disabled value="">Filter by Genres</option>
+              <option value="">all</option>
+              <option v-for="genre in genres">{{genre}}</option>
             </select>
           </nav>
         </div>
